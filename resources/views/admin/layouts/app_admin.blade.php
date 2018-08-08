@@ -11,6 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
+    <script src="{{ asset('libs/fontawesome-free-5.2.0-web/js/all.js') }}"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -39,7 +40,7 @@
                                 Блог
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Категории</a>
+                                <a class="dropdown-item" href="{{route('admin.category.index')}}">Категории</a>
                                 <a class="dropdown-item" href="#">Материалы</a>
                             </div>
                         </li>

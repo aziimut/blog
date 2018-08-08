@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 Route::group(['prefix'=>'admin', 'middleware'=>['auth'], 'namespace' => 'Admin'],function (){
   Route::get('/', 'DashboardController@dashboard')->name('admin.index');
+  Route::resource('/category','CategoryController', ['as' => 'admin']);
 });
 
 
