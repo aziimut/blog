@@ -12,11 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('blog.home');
 });
 Route::group(['prefix'=>'admin', 'middleware'=>['auth'], 'namespace' => 'Admin'],function (){
   Route::get('/', 'DashboardController@dashboard')->name('admin.index');
   Route::resource('/category','CategoryController', ['as' => 'admin']);
+  Route::resource('/article','ArticleController', ['as' => 'admin']);
 });
 
 
